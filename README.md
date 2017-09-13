@@ -20,7 +20,7 @@ When u have a raspberry pi ,you should do something.
 
    一般8G到16G到32G不等，但是一定得注意，需要一张高速读写的SD卡。这一点很关键，因为是用来当作系统盘的，如果买读写速度很次的次品卡，就会对系统运行时显得没有耐心，从而失去热情。
 
-3. 一个5V、2.0A的稳定输出电源
+3. 一个`5V、2.0A`的稳定输出电源
 
    电源对于一切电子产品都是至关重要的，电源的稳定与否，直接影响电子产品的体验，性能甚至寿命。
 
@@ -61,7 +61,7 @@ Raspbian comes pre-installed with plenty of software for education, programming 
 
   Minimal image based on Debian Stretch
 
-这两个版本的区别，我也不清楚，也没有查到相关的资料，但根据英文解释来说，第一个支持图形桌面，是基于Debian系统的拓展。第二个则偏向与低配版本的。
+这两个版本的区别，我也不清楚，也没有查到相关的资料，但根据英文解释来说，第一个支持图形桌面，是基于Debian系统的拓展。第二个是偏向与低配版本的。
 
 这里我选择下载第一个，可以通过浏览器直接下载，也可以下载种子，通过迅雷或其他种子下载文件进行下载。
 
@@ -78,8 +78,8 @@ Raspbian comes pre-installed with plenty of software for education, programming 
 
 1. 将SD卡用读卡器连接电脑，电脑识别SD卡后，打开工具`SDFormatter.exe`，按照提示将SD卡格式化。这一步我在windows系统中将SD卡格式化也能使用。格式化时要注意修改文件系统为FAT或FAT32。
 2. 打开软件`Win32DiskImager.exe` ，按照步骤，先选刚才解压过的`2017-09-07-raspbian-stretch.img`，然后选对应的SD盘符，点击`write`，等进度完成，如果提示需要格式化SD卡，直接跳过即可。
-3. 写完后将SD卡插入树莓派即可运行。、
-4. 装机后，树莓派系统的pi用户密码默认为raspberry，root权限密码为raspberry
+3. 写完后将SD卡插入树莓派即可运行。
+4. 装机后，树莓派系统的pi用户密码默认为`raspberry`，root权限密码为`raspberry`。
 
 ## Initial Settings
 
@@ -89,13 +89,13 @@ Raspbian comes pre-installed with plenty of software for education, programming 
 
 树莓派默认是支持1920*1080分辨率的，树莓派上电后，屏幕上就能显示出开机界面了。在左上角有几个🍓一样的东西，然后下面一行行代码逐次出现。
 
-首次进入，需要输入用户pi及密码raspberry，之后会在显示屏上显示出图形界面。第一个映入眼里的桌面应该是一条通往远方的公路。__果断鼠标右键，Desktop Preference__，修改成经典的可爱的树莓派。
+首次进入，需要输入用户pi及密码raspberry，之后会在显示屏上显示出图形界面。第一个映入眼里的桌面应该是一条通往远方的公路。_果断鼠标右键，Desktop Preference_，修改成经典的可爱的树莓派。
 
 最重要的一件事，右上角，点击`wifi` 图标，连接对应wifi名称，输入密码，连接wifi。这里需要注意，系统对中文名的wifi显示不出中文，只能显示对应的数字编码（不知道什么编码规则）。
 
 ### 远程连接
 
-刚才开wifi干嘛，远程连接啊！这里提供两种同一局域网内，用个人电脑登录raspberry pi。
+刚才开wifi干嘛，远程连接啊！这里提供两种同一局域网内，用个人电脑登录`raspberry pi`。
 
 #### 进入终端，命令行操作
 
@@ -105,7 +105,7 @@ Raspbian comes pre-installed with plenty of software for education, programming 
    sudo ifconfig -a
    ```
 
-   在输出的信息中找到树莓派连接的IP地址，假设为192.168.31.231。
+   在输出的信息中找到树莓派连接的IP地址，假设为`192.168.31.231`。
 
 2. 终端输入
 
@@ -117,7 +117,7 @@ Raspbian comes pre-installed with plenty of software for education, programming 
 
 3. PC端下载Putty软件，双击运行后，将树莓派IP地址输入在`Host Name (or IP address)`输入框中，`Port` 默认为**22** 。点击右下角`Open` 进入终端操作窗口。
 
-4. 输入默认用户名pi，对应密码raspberry即可。
+4. 输入默认用户名`pi`，对应密码`raspberry`即可。
 
 #### GUI操作界面
 
@@ -137,21 +137,11 @@ Raspbian comes pre-installed with plenty of software for education, programming 
 
    回车即可，在打开的窗口中，输入树莓派IP地址如192.168.31.231，点击连接。
 
-3. 在弹出的窗口中，Module选sesman-Xvnc，username为pi，password为raspberry，点击ok即可。
+3. 在弹出的窗口中，`Module`选sesman-Xvnc，`username`为pi，`password`为raspberry，点击ok即可。
 
-此图形操作界面，能够完美适配FHD屏幕，但是由于是局域网内连接，收到数据传输速率的影响，整体图形界面会显得非常卡顿，但是不耽误系统的正常使用，如果有条件，建议树莓派直接连接显示器操作。
+此图形操作界面，能够完美适配FHD屏幕，但是由于是局域网内连接，受到数据传输速率的影响，整体图形界面会显得非常卡顿，但是不耽误系统的正常使用，如果有条件，建议树莓派直接连接显示器操作。
 
 ### 一些配置
-
-
-
-
-
-
-
-
-
-
 
 
 
