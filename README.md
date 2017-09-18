@@ -89,7 +89,11 @@ Raspbian comes pre-installed with plenty of software for education, programming 
 
 树莓派默认是支持1920*1080分辨率的，树莓派上电后，屏幕上就能显示出开机界面了。在左上角有几个🍓一样的东西，然后下面一行行代码逐次出现。
 
-首次进入，需要输入用户pi及密码raspberry，之后会在显示屏上显示出图形界面。第一个映入眼里的桌面应该是一条通往远方的公路。_果断鼠标右键，Desktop Preference_，修改成经典的可爱的树莓派。
+首次进入，需要输入用户pi及密码raspberry，之后会在显示屏上显示出图形界面。第一个映入眼里的桌面应该是一条通往远方的公路。
+
+_果断鼠标右键_ -->_Desktop Preferences_ ，调出_Appearance Settings_ ， 在_Picture_ 中选出`raspberr-pi-logo.png` ，修改成经典的可爱的树莓派。
+
+你若喜欢，Follow Your Information！
 
 最重要的一件事，右上角，点击`wifi` 图标，连接对应wifi名称，输入密码，连接wifi。这里需要注意，系统对中文名的wifi显示不出中文，只能显示对应的数字编码（不知道什么编码规则）。
 
@@ -113,7 +117,7 @@ Raspbian comes pre-installed with plenty of software for education, programming 
    sudo raspi-config
    ```
 
-   进入树莓派配置工具界面，选择…… 开启SSH。
+   进入树莓派配置工具界面，选择_Interfacing Options_ --> _SSH_  后开启SSH。
 
 3. PC端下载Putty软件，双击运行后，将树莓派IP地址输入在`Host Name (or IP address)`输入框中，`Port` 默认为**22** 。点击右下角`Open` 进入终端操作窗口。
 
@@ -143,7 +147,51 @@ Raspbian comes pre-installed with plenty of software for education, programming 
 
 ### 一些配置
 
+#### 配置界面
 
+树莓派有自己的配置工具，基于终端显示的配置界面。终端输入：
+
+```bash
+sudo raspi-config 
+```
+
+就回弹出如下所示画面：
+
+```bash
+┌─────────┤ Raspberry Pi Software Configuration Tool (raspi-config) ├──────────┐
+│                                                                              │
+│    1 Change User Password           Change password for the current u        │
+│    2 Hostname                       Set the visible name for this Pi         │
+│    3 Boot Options                   Configure options for start-up           │
+│    4 Localisation Options           Set up language and regional sett        │
+│    5 Interfacing Options            Configure connections to peripher        │
+│    6 Overclock                      Configure overclocking for your P        │
+│    7 Advanced Options               Configure advanced settings              │
+│    8 Update                         Update this tool to the latest ve        │
+│    9 About raspi-config             Information about this configurat        │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                     <Select>                     <Finish>                    │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+
+这里的设置内容够我说一辈子的，这里只介绍几个用得到的。
+
+- Localisation Options
+
+  - Change Locale
+
+    中文环境配置
+
+  - Change Timezone
+
+- Boot Options
+
+- Overclock
+
+- Advanced Options
 
 
 
