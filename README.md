@@ -91,11 +91,11 @@ Raspbian comes pre-installed with plenty of software for education, programming 
 
 首次进入，需要输入用户pi及密码raspberry，之后会在显示屏上显示出图形界面。第一个映入眼里的桌面应该是一条通往远方的公路。
 
-_果断鼠标右键_ -->_Desktop Preferences_ ，调出_Appearance Settings_ ， 在_Picture_ 中选出`raspberr-pi-logo.png` ，修改成经典的可爱的树莓派。
+_果断鼠标右键_ -->_Desktop Preferences_ ，调出 _Appearance Settings_ ， 在 _Picture_ 中选出`raspberr-pi-logo.png` ，修改成经典的可爱的树莓派。
 
 你若喜欢，Follow Your Information！
 
-最重要的一件事，右上角，点击`wifi` 图标，连接对应wifi名称，输入密码，连接wifi。这里需要注意，系统对中文名的wifi显示不出中文，只能显示对应的数字编码（不知道什么编码规则）。
+最重要的一件事，右上角，点击`wifi` 图标，连接对应wifi名称，输入密码，连接wifi。这里需要注意，系统对中文名的wifi显示不出中文（可以将系统本地语言更改为中文，后面设置中涉及到），只能显示对应的数字编码（不知道什么编码规则）。
 
 ### 远程连接
 
@@ -133,7 +133,7 @@ _果断鼠标右键_ -->_Desktop Preferences_ ，调出_Appearance Settings_ ，
 
    询问时输入默认Y。
 
-2. 在PC上可以借助远程桌面连接，在程序附件中找到，或者`Win+r`，在运行中输入
+2. 在PC上可以借助远程桌面连接，可在程序附件中找到，或者`Win+r`，在运行中输入
 
    ```cmd
    mstsc.exe
@@ -144,6 +144,8 @@ _果断鼠标右键_ -->_Desktop Preferences_ ，调出_Appearance Settings_ ，
 3. 在弹出的窗口中，`Module`选sesman-Xvnc，`username`为pi，`password`为raspberry，点击ok即可。
 
 此图形操作界面，能够完美适配FHD屏幕，但是由于是局域网内连接，受到数据传输速率的影响，整体图形界面会显得非常卡顿，但是不耽误系统的正常使用，如果有条件，建议树莓派直接连接显示器操作。
+
+某宝上也有使用微雪的3.5 inch 到7.0 inch 尺寸不等的 LCD 带触控显示屏出售。但分辨率普遍不高，而且触屏操作十分笨拙，除任性外不建议购买。
 
 ### 一些配置
 
@@ -179,13 +181,39 @@ sudo raspi-config
 
 这里的设置内容够我说一辈子的，这里只介绍几个用得到的。
 
-- Localisation Options
+1. Change User Password
 
-  - Change Locale
+   修改当前用户的密码
 
-    中文环境配置
+2. Hostname
 
-  - Change Timezone
+   为你的 Pi 设置一个可用的名字
+
+3. Boot Options
+
+   这里选择一些启动的方式：包括命令行的加载，图形界面的加载，自动以 `pi` 用户登录，等候知道有可用网络启动，以及启动界面加载。
+
+4. Localisation Options
+
+   - Change Locale 
+
+     用来设置语言及本地初始化设置，选中回车，在 `Configuring locales` 窗口中，找到 zh_CN.UTF-8 UTF-8，通过空格选中，确认后再次选择 zh_CN.UTF-8，然后重启树莓派，即可完成 `raspberry pi` 中文环境配置。
+
+     但还是建议使用英文环境。重启可以在终端中使用命令行：
+
+     ```bash
+     sudo shutdown now
+     ```
+
+   - Change Timezone
+
+     这里配置时区，官方系统开机默认是伦敦所在的东一区，国内为东八区，回车确认后，在先在 `Geographic area` 选择亚洲 `Asia` 之后在 `Timezone` 中选择 `Shanghai` ，真有意思，我也不知道为啥会是上海，可是上面大陆地区只有上海，国内还有台北可以选。
+
+   - Change Wi-Fi Country 
+
+     Set the legal channels used in your country. 这个配置我没看懂啥意思，不过我还是选了 `CN China` 。
+
+     后来仔细想一想，可能是在这里配置了 WiFi 的名字可以以中文显示。。。
 
 - Boot Options
 
