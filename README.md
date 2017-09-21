@@ -1,8 +1,10 @@
-# Daoshi_daoshi_Raspberry_pi
+# Grow_Up_With_Raspberry_Pi
 
 When u have a raspberry pi ,you should do something.
 
-## Somestory
+[TOC]
+
+## Another Story
 
 为什么要写这篇哦，我原本是没有打算的，直到我的树莓派系统被我彻底的玩坏掉。
 
@@ -215,13 +217,67 @@ sudo raspi-config
 
      后来仔细想一想，可能是在这里配置了 WiFi 的名字可以以中文显示。。。
 
-- Boot Options
+5. Interfacing Options
 
-- Overclock
+   这里可以配置一些外设的开启或关闭，如 Camera，SSH（之前我们开启命令行远程连接用到过），VNC（远程桌面操作连接），SPI，I2C，Serial，1-Wire，Remote GPIO等。
 
-- Advanced Options
+   这些接口无疑就是树莓派强大功能的基础，有些接口想必大家都不陌生，但是有一些还没有接触到，后续笔者会使用I2C和SPI分别驱动128*64的OLED小屏幕，敬请期待。
+
+6. Overclock
+
+   好吧，这里真是坑，本来想用这里来配置树莓派超频，来疯狂一把，但是回车后一直提示 `This pi cannot be overclocked ` ，至于为什么，还没有找到合理的解释。
+
+   在知道树莓派能超频之后，我通过其他方法查询了本机，才发现本机已经超频到了1200Mhz，难怪 _小核桃_ 的树莓派网页看视频很卡，而我的关掉弹幕， `cpu` 使用情况也就六七十，想要了解关于 overclock的事情，请点击这里。、
+
+7. Advanced Options
+
+   Configure advanced settings，这里预留了一些高级配置。
+
+   - Expand Filesystem
+
+     树莓派默认不适用SD卡的全部空间，有一部分保留，所以可以选中将根分区扩展到整张SD卡。
+
+   - Overscan
+
+     可以扩充或缩小屏幕，之前老版本的树莓派可能不能自适应，但是现在都能自适应。
+
+   - Memory Split
+
+     可以选择给GPU分配多少内存，默认是 64M 。
+
+   - Audio
+
+     这里配置树莓派的音频输出，通过3.5mm Jack 还是通过HDMI，当然有三种选项，Auto，Force 3.5mm和Force HDMI。
+
+     这里提一下，如果使用HDMI转接VGA的转接线，而且是有源带音频接口的，如果选择Auto项，就需要使用转接头上的3.5mm Jack。
+
+   - Resolution
+
+     Set a specific screen resolution 用于配置连接显示的规格， 比如：DMT Mode 82 1920*1080 60Hz 16：9 等。
+
+   - GL Driver 
+
+     这个没看懂是啥，不说了不说了，如果想知道是啥的话，可以试一试，要大胆的尝试。
+
+8. Update 
+
+   这里把 raspi-config 这个工具自动升级到最新版本。
+
+9. About raspi-config
+
+   This tool provides a straight-forward way of doing initial configuration of the Raspberry Pi. Although it can be run at any time, some of the options may have difficulties if you have heavily customised your installation.
+
+诶呀，说好了只介绍几个用的到的，结果没忍住，还是基本都行都覆盖了。当然，第一次配置这个，当然要什么都试一遍啊，要不然怎么能出现系统崩溃的状况呢。
+
+## Raspberry Pi正常使用
+
+以上内容介绍的基本配置，当我们首次拿到树莓派，我们需要进行这些配置，或者说我们需要了解这些配置，因为在以后的操作中会很经常的与这些基本配置打交道，几乎每次Raspberry Pi的使用都会与这些戚戚相关。
+
+那么问题来了，当我们第二次打开树莓派的时候，能做些什么呢？看到可爱的树莓浮现在桌面上的时候，在思考些什么呢?
+
+接下来与树莓派一起的成长过程中，会遇到形形色色的趣事，本篇README也接近尾声，我会在这里留下以后每次捣鼓树莓派的主题，从这里开始，记录每一次跟树莓派的血战肉搏。
 
 
 
-## 未完待续
+
 
