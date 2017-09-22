@@ -277,7 +277,9 @@ sudo raspi-config
 
 接下来与树莓派一起的成长过程中，会遇到形形色色的趣事，本篇README也接近尾声，我会在这里留下以后每次捣鼓树莓派的主题，从这里开始，记录每一次跟树莓派的血战肉搏。
 
-## [Software]()
+## [Software](https://github.com/LJacki/Grow_Up_With_Raspberry_Pi/blob/master/Software.md)
+
+
 
 
 
