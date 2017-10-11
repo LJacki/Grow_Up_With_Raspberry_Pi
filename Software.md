@@ -116,6 +116,154 @@ apt会把已装或者已卸载的软件都备份在硬盘上，所以假如需�
 
 ### Useful__Software
 
+#### 播放神器——Omxplayer
+
+树莓派是支持1080P电影播放的，那么在命令行操作的情况下怎么才能播放1080P电影，及高质量无损音乐呢。经过几款播放器的横向对比，最终笔者推荐播放神器——[Omxplayer](https://elinux.org/Omxplayer) 。
+
+树莓派中的CPU性能较差，而GPU较强大，omxplayer是专门针对树莓派的GPU的播放器，支持硬件解码。
+
+##### 安装与初次体验
+
+首先下载并安装 `omxplayer` 
+
+```bash
+wget http://omxplayer.sconde.net/builds/omxplayer_0.3.6~git20150505~b1ad23e_armhf.deb
+dpkg -i omxplayer_0.3.6~git20150505~b1ad23e_armhf.deb
+```
+
+安装之后，就可以在终端输入命令：
+
+```bash
+sudo omxplayer -o local videofile.mp4
+```
+
+测试后支持的格式：MKV、AVI、FLV、MP4
+
+全屏播放的参数是 `-r` ：
+
+```bash
+sudo omxplayer -r -0 local videfile.mp4
+```
+
+如果想用HDMI的输出声音，在/boot/config.txt 里面设置HDMI_DRIVER=2，然后终端输入：
+
+```bash
+sudo omxplayer -o hdmi videofile.mp4 
+```
+
+##### 相关参数介绍
+
+终端输入：
+
+```bash
+omxplayer --help
+Usage: omxplayer [OPTIONS] [FILE]
+-h  --help                  Print this help
+-v  --version               Print version info
+-k  --keys                  Print key bindings
+-n  --aidx  index           Audio stream index    : e.g. 1
+-o  --adev  device          Audio out device      : e.g. hdmi/local/both
+-i  --info                  Dump stream format and exit
+-I  --with-info             dump stream format before playback
+-s  --stats                 Pts and buffer stats
+-p  --passthrough           Audio passthrough
+-d  --deinterlace           Force deinterlacing
+    --nodeinterlace         Force no deinterlacing
+    --nativedeinterlace     let display handle interlace
+    --anaglyph type         convert 3d to anaglyph
+    --advanced              Allow advanced deinterlace for HD videos
+-w  --hw                    Hw audio decoding
+-3  --3d mode               Switch tv into 3d mode (e.g. SBS/TB)
+-M  --allow-mvc             Allow decoding of both views of MVC stereo stream
+-y  --hdmiclocksync         Display refresh rate to match video (default)
+-z  --nohdmiclocksync       Do not adjust display refresh rate to match video
+-t  --sid index             Show subtitle with index
+-r  --refresh               Adjust framerate/resolution to video
+-g  --genlog                Generate log file
+-l  --pos n                 Start position (hh:mm:ss)
+-b  --blank                 Set background to black
+```
+
+上面的参数介绍比较简单，应该都能看懂，就不一一介绍了。介绍一点好玩的使用方法。
+
+首先你可以不下载这个MP4文件，如果你有以rtmp://...开头的流，通过Omxplayer在线播放流媒体文件：
+
+```bash
+omxplayer rtmp://... 
+omxplayer rtmpt://... 
+```
+
+当全屏状态下观看已经成为显示，接下来需要做的就是使用键盘快捷键操作，Omxplayer提供以下键盘操作：
+
+```bash
+z	Show Info  
+1	Decrease Speed
+2	Increase Speed
+j	Previous Audio stream
+k	Next Audio stream
+i	Previous Chapter
+o	Next Chapter
+n	Previous Subtitle stream
+m 	Next Subtitle stream
+s	Toggle subtitles
+d	Subtitle delay -250ms
+f 	Subtitle delay +250ms
+q	Exit Omxplayer
+-	Decrease Volume
++	increase Volume
+Left Arrow 	Seek -30s
+Right Arrow Seek +30s
+Down Arrow	Seek -600s
+Up Arrow	Seek +600s
+Space or p	Pasue/Resume
+```
+
+有了这些快捷键就满足了嘛？
+
+##### 其实有操作界面
+
+对于很不熟悉命令行操作的情况下，来介绍一款用python写的omxplayer图形播放界面，虽然很简单，但是还是很好用的。
+
+安装以来软件：
+
+```bash
+wget http://pexpect.sourceforge.net/pexpect-2.3.tar.gz
+tar xzf pexpect-2.3.tar.gz
+cd pexpect-2.3
+sudo python ./setup.py install
+cd..
+```
+
+安装图形软件：
+
+```bash
+git clone https://github.com/KenT2/tboplayer.git
+cd tboplayer
+```
+
+运行软件：
+
+```bash
+python tboplayer.py
+```
+
+回车一敲，简单的图形操作界面就露出来了，过多的也就不解释了。
+
+##### 打造音乐播放器
+
+omxplayer除了播放视频格式，也是支持音频播放的，而且可以在终端中输入命令来进行当前目录内歌曲循环播放：
+
+```bash
+sudo for i in *;do omxplayer $i;done
+```
+
+当然这只是shell语句的一个简单的循环，不过我们可以在当前目录写出一些python的脚本，利用python调用系统命令的功能，也可以完成循环播放，随机播放，批量修改歌曲名等功能。
+
+#### After
+
+这就是Omxplayer ，强大的树莓派播放软件。
+
+
 ### Others__Software
 
 ### 写在后面
