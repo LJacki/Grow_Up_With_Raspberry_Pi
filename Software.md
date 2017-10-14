@@ -88,27 +88,27 @@ Package name指代为软件包的名称。
 
 10. dpkg -S file
 
-  这个文档属于哪个已经安装的软件包。
+    这个文档属于哪个已经安装的软件包。
 
 11. dpkg -L package
 
-   列出软件包中的任何文档。
+    列出软件包中的任何文档。
 
 12. dpkg -l
 
-   理出所有已经安装的软件包。
+    理出所有已经安装的软件包。
 
 13. apt-file search filename
 
-   查找包含特定文档的软件包（不一定是已安装的），这些文档的文档中含有指定的字符串。
+    查找包含特定文档的软件包（不一定是已安装的），这些文档的文档中含有指定的字符串。
 
-   `apt-file` 是个单独的软件包。需先试用 `apt-get install` 安装。
+    `apt-file` 是个单独的软件包。需先试用 `apt-get install` 安装。
 
-   假如`apt-file search filename` 输出的内容太多，可以尝试使用 `apt-file search filename | grep -w filename` （只显示指定字符串作为完整的单词出现在其中的那些文档名）或类似方法，例如：`apt-file search filename | grep /bin/` （只显示位于诸如/bin或/usr/bin这些文件夹中的文档，假如要查找的是某个特定的执行文档的话，这样做是有帮助的）。
+    假如`apt-file search filename` 输出的内容太多，可以尝试使用 `apt-file search filename | grep -w filename` （只显示指定字符串作为完整的单词出现在其中的那些文档名）或类似方法，例如：`apt-file search filename | grep /bin/` （只显示位于诸如/bin或/usr/bin这些文件夹中的文档，假如要查找的是某个特定的执行文档的话，这样做是有帮助的）。
 
 14. apt-get autoclean
 
-   定期运行这个命令来清除那些已卸载的软件包的.deb文档。通过这种方式，您能够释放大量的磁盘空间。假如您的需求十分迫切，能够使用 `apt-get clean` 以释放更多空间。这个命令会将已安装软件包裹的.deb文档一并删除。大多数情况下不会再用到这些.debs文档，因此假如你为磁盘空间不足而感到焦头烂额，这个办法也许值得一试。
+    定期运行这个命令来清除那些已卸载的软件包的.deb文档。通过这种方式，您能够释放大量的磁盘空间。假如您的需求十分迫切，能够使用 `apt-get clean` 以释放更多空间。这个命令会将已安装软件包裹的.deb文档一并删除。大多数情况下不会再用到这些.debs文档，因此假如你为磁盘空间不足而感到焦头烂额，这个办法也许值得一试。
 
 ### For thanks
 
