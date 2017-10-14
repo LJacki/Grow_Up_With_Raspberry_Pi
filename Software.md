@@ -118,7 +118,92 @@ Package name指代为软件包的名称。
 
 ### lolcat——Make your Terminal Colourful
 
+`lolcat`  一个在Linux终端中输出彩虹特效的命令行工具。他是一个针对Linux，BSD和OSX平台的工具，类似于`cat` 命令，并为`cat` 的输出添加彩虹般的色彩。
 
+#### Installing
+
+这里我们以windows10内嵌的ubuntu子系统来进行操作，跟树莓派上的操作是一样的。
+
+首先打开终端，已经把子系统路径加入系统环境变量，直接`Win+r` ，输入`bash` ，树莓派中可以直接` Alt + T` ，这时候用到`apt-get` 命令，如有需求[自行复习]()在终端中输入：
+
+```bash
+sudo apt-get install lolcat
+# it will be installing automatically
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  lolcat
+0 upgraded, 1 newly installed, 0 to remove and 88 not upgraded.
+Need to get 5,514 B of archives.
+After this operation, 70.7 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/universe lolcat all 42.0.99-1 [5,514 B]
+Fetched 5,514 B in 9s (556 B/s)
+Selecting previously unselected package lolcat.
+(Reading database ... 51497 files and directories currently installed.)
+Preparing to unpack .../lolcat_42.0.99-1_all.deb ...
+Unpacking lolcat (42.0.99-1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up lolcat (42.0.99-1) ...
+```
+
+#### How to use
+
+安装好之后，在使用之前我们先通过命令行来了解它可用的选项和其帮助文档。终端输入：
+
+```bash
+lolcat -h
+```
+
+很调皮，只看文档说明就能看出来这个软件的效果：
+
+```bash
+Usage: lolcat [OPTION]... [FILE]...
+
+Concatenate FILE(s), or standard input, to standard output.
+With no FILE, or when FILE is -, read standard input.
+
+    --spread, -p <f>:   Rainbow spread (default: 3.0)
+      --freq, -F <f>:   Rainbow frequency (default: 0.1)
+      --seed, -S <i>:   Rainbow seed, 0 = random (default: 0)
+       --animate, -a:   Enable psychedelics
+  --duration, -d <i>:   Animation duration (default: 12)
+     --speed, -s <f>:   Animation speed (default: 20.0)
+         --force, -f:   Force color even when stdout is not a tty
+       --version, -v:   Print version and exit
+          --help, -h:   Show this message
+
+Examples:
+  lolcat f - g      Output f's contents, then stdin, then g's contents.
+  lolcat            Copy standard input to standard output.
+  fortune | lolcat  Display a rainbow cookie.
+
+Report lolcat bugs to <http://www.github.org/busyloop/lolcat/issues>
+lolcat home page: <http://www.github.org/busyloop/lolcat/>
+Report lolcat translation bugs to <http://speaklolcat.com/>
+```
+
+上面就是参数的详细说明，这样看好像没有效果，废话说完了，直接上图：
+
+![lolcat-h](C:\Users\LJack\Desktop\Git\Daoshi_daoshi_Raspberry_Pi\lolcat-h.png)
+
+哈哈 看到效果了吧，效果还是极其美妙的。我们可以这样用：
+
+```bash
+sudo ls -al | lolcat -F 0.3
+```
+
+那么就会出现这样的效果：
+
+![ls-al](C:\Users\LJack\Desktop\Git\Daoshi_daoshi_Raspberry_Pi\ls-al.png)
+
+这个样子可以玩一年，多试试不同的参数，总能带来不一样的惊喜。
+
+#### After
+
+这个软件是我最先接触到的比较好玩，无聊，有趣的，当命令行遇到`lolcat` ，改变了对命令行的认识，仿佛像打开新世界的大门，充满着孩童般的好奇。这段主要提及到`lolcat` ，具体玩法，自己探索或者可以跟[lolcat ：一个在 Linux 终端中输出彩虹特效的命令行工具](https://linux.cn/article-5798-1.html)  ，进行交流。
+
+愿Linux路上不孤单。 
 
 ## Useful__Software
 
