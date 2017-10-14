@@ -116,6 +116,12 @@ Package name指代为软件包的名称。
 
 ## Useless__Software
 
+### Make your Terminal Colourful——lolcat
+
+
+
+
+
 ## Useful__Software
 
 ### 播放神器——Omxplayer
