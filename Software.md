@@ -88,7 +88,7 @@ Package name指代为软件包的名称。
 
 10. dpkg -S file
 
-  这个文档属于哪个已经安装的软件包。
+   这个文档属于哪个已经安装的软件包。
 
 11. dpkg -L package
 
@@ -104,7 +104,7 @@ Package name指代为软件包的名称。
 
    `apt-file` 是个单独的软件包。需先试用 `apt-get install` 安装。
 
-   假如`apt-file search filename` 输出的内容太多，可以尝试使用 `apt-file search filename | grep -w filename` （只显示指定字符串作为完整的单词出现在其中的那些文档名）或类似方法，例如：`apt-file search filename | grep /bin/` （只显示位于诸如/bin或/usr/bin这些文件夹中的文档，假如要查找的是某个特定的执行文档的话，这样做是有帮助的）。
+     假如`apt-file search filename` 输出的内容太多，可以尝试使用 `apt-file search filename | grep -w filename` （只显示指定字符串作为完整的单词出现在其中的那些文档名）或类似方法，例如：`apt-file search filename | grep /bin/` （只显示位于诸如/bin或/usr/bin这些文件夹中的文档，假如要查找的是某个特定的执行文档的话，这样做是有帮助的）。
 
 14. apt-get autoclean
 
@@ -350,7 +350,7 @@ sudo for i in *;do omxplayer $i;done
 
 当然这只是shell语句的一个简单的循环，不过我们可以在当前目录写出一些python的脚本，利用python调用系统命令的功能，也可以完成循环播放，随机播放，批量修改歌曲名等功能。
 
-### After
+#### After
 
 这就是Omxplayer ，强大的树莓派播放软件。
 
