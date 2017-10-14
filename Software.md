@@ -1,4 +1,4 @@
-## Suggested  Software
+# Suggested  Software
 
 [TOC]
 
@@ -8,17 +8,17 @@ Raspberry Pi 的系统 Raspbain 毕竟是基于 Linux 的发行版 Debain，所�
 
 现在开始介绍吧！
 
-### APT命令
+## APT命令
 
 介绍软件之前先介绍这款工具，`apt-get` 是一条命令 `Advanced Package Tool` ，是一款适用于Unix和Linux系统的应用程序管理。 `apt-get` 成名的原因之一在于其出色的解决软件依赖关系的能力，在Linux社区得到广泛使用，成为用来管理桌面、笔记本和网络的重要工具。
 
-#### apt命令用法
+### apt命令用法
 
 Package name指代为软件包的名称。
 
-#####  apt-get update
+1. apt-get update
 
-需要定期运行这一命令以确保软件包列表是最新的。
+   需要定期运行这一命令以确保软件包列表是最新的。
 
 - apt-get install package name
 
@@ -44,85 +44,87 @@ Package name指代为软件包的名称。
 
   有些软件很难卸载，而且还阻止了别的软件的应用，就用这个，但是有点冒险。
 
-##### apt-get autoclean
+2. apt-get autoclean
 
-apt会把已装或者已卸载的软件都备份在硬盘上，所以假如需要空间的话，就能让这个命令来删除已经卸载的软件的备份。
+   apt会把已装或者已卸载的软件都备份在硬盘上，所以假如需要空间的话，就能让这个命令来删除已经卸载的软件的备份。
 
-##### apt-get clean
 
-这个命令会把安装的软件的备份也删除，但是不会影响软件的正常使用。
+3. apt-get clean
 
-##### apt-get upgrade
+   这个命令会把安装的软件的备份也删除，但是不会影响软件的正常使用。
 
-这条指令可以更新软件包，不仅可以从相同版本号的发布版中更新软件包，也可以从新版本号的发布版中更新软件包，尽管实现后一种更新的推荐命令为 `apt-get dist-upgrade`。
 
- 在运行apt-get upgrade命令时加上-u选项很有用（即：`apt-get -u upgrade` )。这个选项让APT显示完整的可更新软件包列表。不加这个选项，你就只能盲目地更新。APT会下载每个软件包的最新更新版本，然后以合理的次序安装它们。注意在运行该命令前应先运行 `apt-get update` 更新数据库，更新任何已安装的软件包。
+4. apt-get upgrade
 
-##### apt-get dist-upgrade
+   这条指令可以更新软件包，不仅可以从相同版本号的发布版中更新软件包，也可以从新版本号的发布版中更新软件包，尽管实现后一种更新的推荐命令为 `apt-get dist-upgrade`。
 
-将系统升级到新版本。
+   在运行apt-get upgrade命令时加上-u选项很有用（即：`apt-get -u upgrade` )。这个选项让APT显示完整的可更新软件包列表。不加这个选项，你就只能盲目地更新。APT会下载每个软件包的最新更新版本，然后以合理的次序安装它们。注意在运行该命令前应先运行 `apt-get update` 更新数据库，更新任何已安装的软件包。
 
-##### apt-cache search string
+5. apt-get dist-upgrade
 
-在软件包列表中搜索字符串。
+   将系统升级到新版本。
 
-`dpkg -l package-name-pattern` 列出任何和模式相匹配的软件包。假如您不知道软件包的全名，您能够使用 `package-name-pattern` 。
+6. apt-cache search string
 
-##### aptitude
+   在软件包列表中搜索字符串。
 
-周详查看已安装或可用的软件包。和 `apt-get` 类似，`aptitude` 能够通过命令行方式调用，但仅限于某些命令——最常见的有安装和卸载命令。
+   `dpkg -l package-name-pattern` 列出任何和模式相匹配的软件包。假如您不知道软件包的全名，您能够使用 `package-name-pattern` 。
 
-由于 `aptitude` 比 `apt-get` 了解更多信息，能够说他更适合用来进行安装和卸载。
+7. aptitude
 
-##### apt-cache showpkg pkgs
+   周详查看已安装或可用的软件包。和 `apt-get` 类似，`aptitude` 能够通过命令行方式调用，但仅限于某些命令——最常见的有安装和卸载命令。
 
-显示软件包信息。
+   由于 `aptitude` 比 `apt-get` 了解更多信息，能够说他更适合用来进行安装和卸载。
 
-`apt-cache dumpavail` 打印可用软件包列表。
+8. apt-cache showpkg pkgs
 
-##### apt-cache pkgnames
+   显示软件包信息。
 
-打印软件包列表中任何软件包的名称。
+   `apt-cache dumpavail` 打印可用软件包列表。
 
-##### dpkg -S file
+9. apt-cache pkgnames
 
-这个文档属于哪个已经安装的软件包。
+   打印软件包列表中任何软件包的名称。
 
-##### dpkg -L package
+10. dpkg -S file
 
-列出软件包中的任何文档。
+  这个文档属于哪个已经安装的软件包。
 
-##### dpkg -l
+11. dpkg -L package
 
-理出所有已经安装的软件包。
+   列出软件包中的任何文档。
 
-##### apt-file search filename
+12. dpkg -l
 
-查找包含特定文档的软件包（不一定是已安装的），这些文档的文档中含有指定的字符串。
+   理出所有已经安装的软件包。
 
-`apt-file` 是个单独的软件包。需先试用 `apt-get install` 安装。
+13. apt-file search filename
 
-假如`apt-file search filename` 输出的内容太多，可以尝试使用 `apt-file search filename | grep -w filename` （只显示指定字符串作为完整的单词出现在其中的那些文档名）或类似方法，例如：`apt-file search filename | grep /bin/` （只显示位于诸如/bin或/usr/bin这些文件夹中的文档，假如要查找的是某个特定的执行文档的话，这样做是有帮助的）。
+   查找包含特定文档的软件包（不一定是已安装的），这些文档的文档中含有指定的字符串。
 
-##### apt-get autoclean
+   `apt-file` 是个单独的软件包。需先试用 `apt-get install` 安装。
 
-定期运行这个命令来清除那些已卸载的软件包的.deb文档。通过这种方式，您能够释放大量的磁盘空间。假如您的需求十分迫切，能够使用 `apt-get clean` 以释放更多空间。这个命令会将已安装软件包裹的.deb文档一并删除。大多数情况下不会再用到这些.debs文档，因此假如你为磁盘空间不足而感到焦头烂额，这个办法也许值得一试。
+   假如`apt-file search filename` 输出的内容太多，可以尝试使用 `apt-file search filename | grep -w filename` （只显示指定字符串作为完整的单词出现在其中的那些文档名）或类似方法，例如：`apt-file search filename | grep /bin/` （只显示位于诸如/bin或/usr/bin这些文件夹中的文档，假如要查找的是某个特定的执行文档的话，这样做是有帮助的）。
 
-#### 致谢
+14. apt-get autoclean
+
+   定期运行这个命令来清除那些已卸载的软件包的.deb文档。通过这种方式，您能够释放大量的磁盘空间。假如您的需求十分迫切，能够使用 `apt-get clean` 以释放更多空间。这个命令会将已安装软件包裹的.deb文档一并删除。大多数情况下不会再用到这些.debs文档，因此假如你为磁盘空间不足而感到焦头烂额，这个办法也许值得一试。
+
+### 致谢
 
  以上对于APT命令的介绍来自[百度百科__apt-get](https://baike.baidu.com/item/apt-get/2360755?fr=aladdin) ，感谢所有为此文档做过贡献的笔者。
 
-### Useless__Software
+## Useless__Software
 
-### Useful__Software
+## Useful__Software
 
-#### 播放神器——Omxplayer
+### 播放神器——Omxplayer
 
 树莓派是支持1080P电影播放的，那么在命令行操作的情况下怎么才能播放1080P电影，及高质量无损音乐呢。经过几款播放器的横向对比，最终笔者推荐播放神器——[Omxplayer](https://elinux.org/Omxplayer) 。
 
 树莓派中的CPU性能较差，而GPU较强大，omxplayer是专门针对树莓派的GPU的播放器，支持硬件解码。
 
-##### 安装与初次体验
+#### 安装与初次体验
 
 首先下载并安装 `omxplayer` 
 
@@ -151,7 +153,7 @@ sudo omxplayer -r -0 local videfile.mp4
 sudo omxplayer -o hdmi videofile.mp4 
 ```
 
-##### 相关参数介绍
+#### 相关参数介绍
 
 终端输入：
 
@@ -220,7 +222,7 @@ Space or p	Pasue/Resume
 
 有了这些快捷键就满足了嘛？
 
-##### 其实有操作界面
+#### 其实有操作界面
 
 对于很不熟悉命令行操作的情况下，来介绍一款用python写的omxplayer图形播放界面，虽然很简单，但是还是很好用的。
 
@@ -249,7 +251,7 @@ python tboplayer.py
 
 回车一敲，简单的图形操作界面就露出来了，过多的也就不解释了。
 
-##### 打造音乐播放器
+#### 打造音乐播放器
 
 omxplayer除了播放视频格式，也是支持音频播放的，而且可以在终端中输入命令来进行当前目录内歌曲循环播放：
 
@@ -259,14 +261,14 @@ sudo for i in *;do omxplayer $i;done
 
 当然这只是shell语句的一个简单的循环，不过我们可以在当前目录写出一些python的脚本，利用python调用系统命令的功能，也可以完成循环播放，随机播放，批量修改歌曲名等功能。
 
-#### After
+### After
 
 这就是Omxplayer ，强大的树莓派播放软件。
 
 
-### Others__Software
+## Others__Software
 
-### 写在后面
+## 写在后面
 
-### Loading
+## Loading
 
