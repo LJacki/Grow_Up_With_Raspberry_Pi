@@ -110,7 +110,7 @@ Package name指代为软件包的名称。
 
    定期运行这个命令来清除那些已卸载的软件包的.deb文档。通过这种方式，您能够释放大量的磁盘空间。假如您的需求十分迫切，能够使用 `apt-get clean` 以释放更多空间。这个命令会将已安装软件包裹的.deb文档一并删除。大多数情况下不会再用到这些.debs文档，因此假如你为磁盘空间不足而感到焦头烂额，这个办法也许值得一试。
 
-### 致谢
+### For thanks
 
  以上对于APT命令的介绍来自[百度百科__apt-get](https://baike.baidu.com/item/apt-get/2360755?fr=aladdin) ，感谢所有为此文档做过贡献的笔者。
 
@@ -201,7 +201,7 @@ sudo ls -al | lolcat -F 0.3
 
 #### After
 
-这个软件是我最先接触到的比较好玩，无聊，有趣的，当命令行遇到`lolcat` ，改变了对命令行的认识，仿佛像打开新世界的大门，充满着孩童般的好奇。这段主要提及到`lolcat` ，具体玩法，自己探索或者可以跟[lolcat ：一个在 Linux 终端中输出彩虹特效的命令行工具](https://linux.cn/article-5798-1.html)  ，进行交流。
+这个软件是我最先接触到的比较好玩，无聊，有趣的，当命令行遇到`lolcat` ，改变了对命令行的认识，仿佛像打开新世界的大门，充满着孩童般的好奇。这段主要提及到`lolcat` 的安装使用，具体怎么玩，自己探索或者可以跟[lolcat ：一个在 Linux 终端中输出彩虹特效的命令行工具](https://linux.cn/article-5798-1.html)  进行交流。
 
 愿Linux路上不孤单。 
 
@@ -360,4 +360,12 @@ sudo for i in *;do omxplayer $i;done
 ## 写在后面
 
 ## Loading
+
+```c
+ m        mmm                #        "
+ #          #   mmm    mmm   #   m  mmm
+ #          #  "   #  #"  "  # m"     #
+ #          #  m"""#  #      #"#      #
+ #mmmmm "mmm"  "mm"#  "#mm"  #  "m  mm#mm
+```
 

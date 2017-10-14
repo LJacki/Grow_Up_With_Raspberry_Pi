@@ -279,6 +279,14 @@ sudo raspi-config
 
 ## [Software](https://github.com/LJacki/Grow_Up_With_Raspberry_Pi/blob/master/Software.md)
 
+```c
+ m        mmm                #        "
+ #          #   mmm    mmm   #   m  mmm
+ #          #  "   #  #"  "  # m"     #
+ #          #  m"""#  #      #"#      #
+ #mmmmm "mmm"  "mm"#  "#mm"  #  "m  mm#mm
+```
+
 
 
 
