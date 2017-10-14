@@ -116,9 +116,7 @@ Package name指代为软件包的名称。
 
 ## Useless__Software
 
-### Make your Terminal Colourful——lolcat
-
-
+### lolcat——Make your Terminal Colourful
 
 
 
@@ -166,30 +164,30 @@ sudo omxplayer -o hdmi videofile.mp4
 ```bash
 omxplayer --help
 Usage: omxplayer [OPTIONS] [FILE]
--h  --help                  Print this help
--v  --version               Print version info
--k  --keys                  Print key bindings
--n  --aidx  index           Audio stream index    : e.g. 1
--o  --adev  device          Audio out device      : e.g. hdmi/local/both
--i  --info                  Dump stream format and exit
--I  --with-info             dump stream format before playback
--s  --stats                 Pts and buffer stats
--p  --passthrough           Audio passthrough
--d  --deinterlace           Force deinterlacing
-    --nodeinterlace         Force no deinterlacing
-    --nativedeinterlace     let display handle interlace
-    --anaglyph type         convert 3d to anaglyph
-    --advanced              Allow advanced deinterlace for HD videos
--w  --hw                    Hw audio decoding
--3  --3d mode               Switch tv into 3d mode (e.g. SBS/TB)
--M  --allow-mvc             Allow decoding of both views of MVC stereo stream
--y  --hdmiclocksync         Display refresh rate to match video (default)
--z  --nohdmiclocksync       Do not adjust display refresh rate to match video
--t  --sid index             Show subtitle with index
--r  --refresh               Adjust framerate/resolution to video
--g  --genlog                Generate log file
--l  --pos n                 Start position (hh:mm:ss)
--b  --blank                 Set background to black
+-h  	--help                  Print this help
+-v  	--version               Print version info
+-k  	--keys                  Print key bindings
+-n  	--aidx  index           Audio stream index    : e.g. 1
+-o  	--adev  device          Audio out device      : e.g. hdmi/local/both
+-i  	--info                  Dump stream format and exit
+-I  	--with-info             dump stream format before playback
+-s  	--stats                 Pts and buffer stats
+-p  	--passthrough           Audio passthrough
+-d  	--deinterlace           Force deinterlacing
+    	--nodeinterlace         Force no deinterlacing
+    	--nativedeinterlace     let display handle interlace
+    	--anaglyph type         convert 3d to anaglyph
+    	--advanced              Allow advanced deinterlace for HD videos
+-w  	--hw                    Hw audio decoding
+-3  	--3d mode               Switch tv into 3d mode (e.g. SBS/TB)
+-M  	--allow-mvc             Allow decoding of both views of MVC stereo stream
+-y  	--hdmiclocksync         Display refresh rate to match video (default)
+-z  	--nohdmiclocksync       Do not adjust display refresh rate to match video
+-t  	--sid index             Show subtitle with index
+-r  	--refresh               Adjust framerate/resolution to video
+-g  	--genlog                Generate log file
+-l  	--pos n                 Start position (hh:mm:ss)
+-b  	--blank                 Set background to black
 ```
 
 上面的参数介绍比较简单，应该都能看懂，就不一一介绍了。介绍一点好玩的使用方法。
@@ -204,26 +202,26 @@ omxplayer rtmpt://...
 当全屏状态下观看已经成为显示，接下来需要做的就是使用键盘快捷键操作，Omxplayer提供以下键盘操作：
 
 ```bash
-z	Show Info  
-1	Decrease Speed
-2	Increase Speed
-j	Previous Audio stream
-k	Next Audio stream
-i	Previous Chapter
-o	Next Chapter
-n	Previous Subtitle stream
-m 	Next Subtitle stream
-s	Toggle subtitles
-d	Subtitle delay -250ms
-f 	Subtitle delay +250ms
-q	Exit Omxplayer
--	Decrease Volume
-+	increase Volume
-Left Arrow 	Seek -30s
-Right Arrow Seek +30s
-Down Arrow	Seek -600s
-Up Arrow	Seek +600s
-Space or p	Pasue/Resume
+z				Show Info  
+1				Decrease Speed
+2				Increase Speed
+j				Previous Audio stream
+k				Next Audio stream
+i				Previous Chapter
+o				Next Chapter
+n				Previous Subtitle stream
+m 				Next Subtitle stream
+s				Toggle subtitles
+d				Subtitle delay -250ms
+f 				Subtitle delay +250ms
+q				Exit Omxplayer
+-				Decrease Volume
++				increase Volume
+Left Arrow 		 Seek -30s
+Right Arrow 	 Seek +30s
+Down Arrow		 Seek -600s
+Up Arrow		 Seek +600s
+Space or p		 Pasue/Resume
 ```
 
 有了这些快捷键就满足了嘛？
