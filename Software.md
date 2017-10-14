@@ -185,7 +185,7 @@ Report lolcat translation bugs to <http://speaklolcat.com/>
 
 上面就是参数的详细说明，这样看好像没有效果，废话说完了，直接上图：
 
-![lolcat-h](C:\Users\LJack\Desktop\Git\Daoshi_daoshi_Raspberry_Pi\lolcat-h.png)
+![lolcat-h](https://github.com/LJacki/Grow_Up_With_Raspberry_Pi/blob/master/lolcat-h.png)
 
 哈哈 看到效果了吧，效果还是极其美妙的。我们可以这样用：
 
@@ -195,7 +195,7 @@ sudo ls -al | lolcat -F 0.3
 
 那么就会出现这样的效果：
 
-![ls-al](C:\Users\LJack\Desktop\Git\Daoshi_daoshi_Raspberry_Pi\ls-al.png)
+![ls-al](https://github.com/LJacki/Grow_Up_With_Raspberry_Pi/blob/master/ls-al.png)
 
 这个样子可以玩一年，多试试不同的参数，总能带来不一样的惊喜。
 
