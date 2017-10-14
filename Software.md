@@ -88,7 +88,7 @@ Package name指代为软件包的名称。
 
 10. dpkg -S file
 
-    这个文档属于哪个已经安装的软件包。
+  这个文档属于哪个已经安装的软件包。
 
 11. dpkg -L package
 
@@ -350,7 +350,7 @@ sudo for i in *;do omxplayer $i;done
 
 当然这只是shell语句的一个简单的循环，不过我们可以在当前目录写出一些python的脚本，利用python调用系统命令的功能，也可以完成循环播放，随机播放，批量修改歌曲名等功能。
 
-### After
+#### After
 
 这就是Omxplayer ，强大的树莓派播放软件。
 
