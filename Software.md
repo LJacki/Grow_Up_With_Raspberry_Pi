@@ -88,7 +88,7 @@ Package name指代为软件包的名称。
 
 10. dpkg -S file
 
-  这个文档属于哪个已经安装的软件包。
+	这个文档属于哪个已经安装的软件包。
 
 11. dpkg -L package
 
