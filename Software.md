@@ -88,7 +88,7 @@ Package name指代为软件包的名称。
 
 10. dpkg -S file
 
-	这个文档属于哪个已经安装的软件包。
+  这个文档属于哪个已经安装的软件包。
 
 11. dpkg -L package
 
@@ -354,6 +354,15 @@ sudo for i in *;do omxplayer $i;done
 
 这就是Omxplayer ，强大的树莓派播放软件。
 
+### 树莓派安装谷歌拼音中文输入法
+
+介绍一下给树莓派安装中文输入法`Fcitx` 及`Google` 拼音输入法，这个吧我都不惜讲，因为太短了。
+
+```python
+sudo apt-get install fcitx fcitx-googlepinyin fcitx-module-cloudpinyin fcitx-sunpinyin
+```
+
+没了，真的就这么多。需要提到的是需要重启后使用，并在输入法配置里面选择中文。
 
 ## Others__Software
 
